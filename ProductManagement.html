@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="hay.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>curds</h2>
+        <p>product management system</p>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="title" id="title" />
+        <div class="price">
+          <input
+            type="number"
+            placeholder="price"
+            id="price"
+            onkeyup="gettotal()"
+          />
+          <input
+            type="number"
+            placeholder="taxes"
+            id="taxes"
+            onkeyup="gettotal()"
+          />
+          <input
+            type="number"
+            placeholder="ads"
+            id="ads"
+            onkeyup="gettotal()"
+          />
+          <input
+            type="number"
+            placeholder="discount"
+            id="discount"
+            onkeyup="gettotal()"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" placeholder="count" id="count" />
+        <input type="text" placeholder="category" id="categroy" />
+        <button id="pttn">Create</button>
+      </div>
+      <div class="under">
+        <div class="serrch">
+          <input
+            onkeyup="serchData(this.value)"
+            type="text"
+            placeholder="Search"
+            id="search8"
+          />
+          <div class="serch2">
+            <button onclick="serchmood(this.id)" id="serc1">
+              Search By Title
+            </button>
+            <button onclick="serchmood(this.id)" id="serc2">
+              Search By Categroy
+            </button>
+          </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>gategory</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="One.js"></script>
+  </body>
+</html>
